@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>♥️​🍞♦️​ Padaria Rednipe</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+            <div class="produtos-container">
+                <div class="produto-card">
+                    <img src="paofrances.jpg" alt="Pão Francês" class="produto-img">
+                    <h3>Pão Red Francês</h3>
+                    <p class="preco">R$ 1,50</p>
+                    <button onclick="adicionarAoCarrinho('Pão Francês', 1.50)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="bolochoc.jpg" alt="Bolo de Chocolate" class="produto-img">
+                    <h3>Bolo Red choc.</h3>
+                    <p class="preco">R$ 25,00</p>
+                    <button onclick="adicionarAoCarrinho('Bolo de Chocolate', 25.00)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="rosca.jpg" alt="Rosquinha" class="produto-img">
+                    <h3>Red Rosquinha</h3>
+                    <p class="preco">R$ 3,00</p>
+                    <button onclick="adicionarAoCarrinho('Rosquinha', 3.00)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <ul id="lista-carrinho">
+                <li>Carrinho vazio</li>
+            </ul>
+            <p class="total">Total: R$ <span id="total">0.00</span></p>
+            
+            <!-- Formulário de pagamento -->
+            <h3>Informações de Pagamento</h3>
+            <form id="pagamento-form">
+                <label for="nome">Nome no Cartão:</label>
+                <input type="text" id="nome" required placeholder="Seu nome completo">
+        
+                <label for="numero-cartao">Número do Cartão:</label>
+                <input type="text" id="numero-cartao" required placeholder="1234 5678 9012 3456" maxlength="19">
+        
+                <label for="validade">Validade:</label>
+                <input type="text" id="validade" required placeholder="MM/AA" maxlength="5">
+        
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required placeholder="123" maxlength="3">
+            </form>
+        
+            <!-- Botão de finalizar compra -->
+            <button id="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Padaria Rednipe - Feito com ♥️​♦️​</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
